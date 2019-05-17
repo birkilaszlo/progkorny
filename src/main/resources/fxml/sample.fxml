@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+   <children>
+      <Pane id="basePane" fx:id="basePane" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <Label layoutX="36.0" layoutY="42.0" text="Mit jelent a következő szó/kifejezés:">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label id="questionLabel" fx:id="questionLabel" layoutX="36.0" layoutY="121.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <VBox layoutX="63.0" layoutY="191.0" prefHeight="242.0" prefWidth="597.0" spacing="40.0">
+               <children>
+                  <RadioButton id="answer1Radio" fx:id="answer1Radio" mnemonicParsing="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton id="answer2Radio" fx:id="answer2Radio" mnemonicParsing="false" toggleGroup="$group1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="answer3Radio" fx:id="answer3Radio" mnemonicParsing="false" toggleGroup="$group1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton id="answer4Radio" fx:id="answer4Radio" mnemonicParsing="false" toggleGroup="$group1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </VBox>
+            <HBox layoutX="287.0" layoutY="489.0" prefHeight="45.0" prefWidth="474.0" spacing="120.0">
+               <children>
+                  <Button id="goButton" fx:id="goButton" mnemonicParsing="false" onAction="#goButtonAction" prefHeight="46.0" prefWidth="194.0" text="Mehet">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button id="exitButton" fx:id="exitButton" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="44.0" prefWidth="177.0" text="Kilépés">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <ImageView id="isCorrectImageView" fx:id="isCorrectImageView" fitHeight="150.0" fitWidth="200.0" layoutX="29.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../pics/correct.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane id="alertPane" fx:id="alertPane" layoutX="232.0" layoutY="340.0" prefHeight="185.0" prefWidth="341.0" visible="false">
+         <children>
+            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#d0d0d0" height="185.0" stroke="BLACK" strokeType="INSIDE" width="347.0" />
+            <Label id="alertLabel" fx:id="alertLabel" alignment="CENTER" layoutY="23.0" prefHeight="66.0" prefWidth="347.0" text="Nem jelölél be egy lehetőséget se" textAlignment="CENTER" textFill="#ed0e0e" wrapText="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button id="backButton" fx:id="backButton" layoutX="133.0" layoutY="112.0" mnemonicParsing="false" onAction="#backButtonAction" text="Vissza" textFill="#ed0e0e">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>
