@@ -10,24 +10,24 @@ import javax.persistence.*;
 public class szavak implements Comparable<szavak>{
 
     /**
-     * Elsődleges kulcs (autoincrement)
+     * Elsődleges kulcs (autoincrement).
       */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     /**
-     * Angol szó
+     * Angol szó.
      */
     @Column(name = "angol")
     private String angol;
     /**
-     * Magyar szó
+     * Magyar szó.
      */
     @Column(name = "magyar")
     private String magyar;
 
     /**
-     * constructor
+     * constructor.
      * @param angol angol szó
      * @param magyar magyar szó
      */
@@ -37,13 +37,13 @@ public class szavak implements Comparable<szavak>{
     }
 
     /**
-     * paraméter nélküli alap constructor
+     * paraméter nélküli alap constructor.
      */
     public szavak() {
     }
 
     /**
-     * Elsődleges kulcs gettere
+     * Elsődleges kulcs gettere.
      * @return id azonosító
      */
     public Integer getId() {
@@ -51,15 +51,15 @@ public class szavak implements Comparable<szavak>{
     }
 
     /**
-     * Elsődleges kulcs settere
-     * @param id
+     * Elsődleges kulcs settere.
+     * @param id azonosito
      */
     public void setId(Integer id) {
         this.id = id;
     }
 
     /**
-     * Angol szó gettere
+     * Angol szó gettere.
      * @return angol szó
      */
     public String getAngol() {
@@ -67,21 +67,21 @@ public class szavak implements Comparable<szavak>{
     }
 
     /**
-     * Angol szó settere
+     * Angol szó settere.
      * @param angol angol szó
      */
     public void setAngol(String angol) {
         this.angol = angol;
     }
     /**
-     * magyarszó gettere
+     * magyarszó gettere.
      * @return magyar szó
      */
     public String getMagyar() {
         return magyar;
     }
     /**
-     * Magyar szó settere
+     * Magyar szó settere.
      * @param magyar magyar szó
      */
     public void setMagyar(String magyar) {
@@ -94,7 +94,7 @@ public class szavak implements Comparable<szavak>{
     }
 
     /**
-     * Szavak ABC sorba történő rendezése (növekvőbe)
+     * Szavak ABC sorba történő rendezése (növekvőbe).
      * @param o hasonlitandó szó
      * @return a sorrendet jelző int
      */
