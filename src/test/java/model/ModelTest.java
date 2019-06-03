@@ -5,7 +5,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ModelTest {
+public class ModelTest {
     private Model m;
 
 
